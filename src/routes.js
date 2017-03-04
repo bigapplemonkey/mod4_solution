@@ -39,7 +39,6 @@
             controller: 'ItemsController as category',
             resolve: {
                 items: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
-                    console.log($stateParams.categoryId);
                     return MenuDataService.getItemsForCategory($stateParams.categoryId);
                 }]
             }

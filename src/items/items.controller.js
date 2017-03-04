@@ -14,7 +14,6 @@
 
     function ItemsController($rootScope, items) {
         var category = this;
-        console.log(items);
         category.name = items.category.name;
         category.special_instructions = items.category.special_instructions;
         category.items = items.menu_items;
