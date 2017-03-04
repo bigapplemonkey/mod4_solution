@@ -17,7 +17,7 @@
         // Home page
             .state('home', {
             url: '/',
-            template: '<img class="ui wireframe image" ng-repeat="i in [1,2,3]" src="/images/short-paragraph.png">'
+            template: '<img class="ui wireframe image" ng-repeat="i in [1,2,3]" src="images/short-paragraph.png">'
         })
 
         // Menu page
