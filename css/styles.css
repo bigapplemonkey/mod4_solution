@@ -1,0 +1,68 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: #f5f5f5;
+    color: #4d4d4d;
+    min-width: 760px;
+    max-width: 760px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-weight: 300;
+}
+
+.wireframe,
+.categories,
+.items,
+.secondary.menu {
+    padding-top: 35px;
+}
+
+.categories,
+.category {
+    padding-bottom: 120px;
+}
+
+.active.section {
+    color: #00B5AD!important;
+    margin-bottom: 20px!important;
+}
+
+.ng-enter {
+    /* transition on enter for .9s */
+    transition: .9s;
+    /* start with opacity 0 (invisible) */
+    opacity: 0;
+}
+
+
+/* end 'enter' transition */
+
+.ng-enter-active {
+    /* end with opacity 1 (fade in) */
+    opacity: 1;
+}

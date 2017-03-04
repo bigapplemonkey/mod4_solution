@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Module 4 Solution</title>
+</head>
+
+<body>
+    <div class="ui secondary menu">
+        <h1 class="ui header">
+      <img src="/images/chef.png">
+      <div class="content">
+        My Restaurant
+        <div class="sub header">Best restaurant in town</div>
+      </div>
+    </h1>
+        <div class="right menu">
+            <a ui-sref="home" ui-sref-active="active" class="item">Home</a>
+            <a ui-sref="menu" ui-sref-active="active" class="item">Menu</a>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    <div ui-view></div ui-view>
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <!-- Modules -->
+    <script src="src/menuapp.module.js"></script>
+    <script src="src/data.module.js"></script>
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+    <!-- Artifacts -->
+    <script src="src/menudata.service.js"></script>
+    <script src="src/categories/categories.component.js"></script>
+    <script src="src/categories/categories.controller.js"></script>
+    <script src="src/items/items.component.js"></script>
+    <script src="src/items/items.controller.js"></script>
+</body>
+
+</html>

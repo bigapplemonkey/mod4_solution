@@ -1,0 +1,25 @@
+<div class="ui relaxed items category">
+    <div class="ui massive breadcrumb">
+        <a class="section" ui-sref="menu">Menu</a>
+        <i class="right chevron icon divider"></i>
+        <div class="active section">{{$ctrl.name}}</div>
+    </div>
+    <div class="ui yellow message" ng-if="$ctrl.instructions">
+        <i class="star icon"></i> {{$ctrl.instructions}}
+    </div>
+    <div class="item" ng-repeat="item in $ctrl.items">
+        <a class="ui tiny image">
+            <img src="/images/image.png">
+        </a>
+        <div class="content">
+            <span class="header">{{item.short_name}}: {{item.name}}</span>
+            <div class="description" ng-if="item.description">
+                <p>{{item.description | capitalize}}.</p>
+            </div>
+            <div class="extra">
+                <div class="ui label" ng-if="item.price_small">Small: $ {{item.price_small | number : 2}}</div>
+                <div class="ui label" ng-if="item.price_large">Large: $ {{item.price_large | number : 2}}</div>
+            </div>
+        </div>
+    </div>
+</div>
