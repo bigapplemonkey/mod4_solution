@@ -9,7 +9,9 @@
     function RoutesConfig($stateProvider, $urlRouterProvider) {
 
         // Redirect to home page if no other URL matches
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/')
+            .when('/menu/category', '/menu')
+            .when('/menu/category/', '/menu');
 
         // *** Set up UI states ***
         $stateProvider

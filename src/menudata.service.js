@@ -15,8 +15,8 @@
 
         service.getAllCategories = function() {
             return $http({
-                method: "GET",
-                url: (ApiBasePath + "/categories.json")
+                method: 'GET',
+                url: (ApiBasePath + '/categories.json')
             }).then(function(result) {
                 return result.data;
             });
@@ -24,9 +24,13 @@
 
         service.getItemsForCategory = function(categoryShortName) {
             return $http({
-                method: "GET",
-                url: (ApiBasePath + "/menu_items.json?category=" + categoryShortName)
+                method: 'GET',
+                url: (ApiBasePath + '/menu_items.json?category=' + categoryShortName)
             }).then(function(result) {
+                if (result.data.menu_items.length < 1) {
+                    console.log('Empty')
+                    throw new Error('Whoops!');
+                };
                 return result.data;
             });
         };
